@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 4 JS</title>
+</head>
+<body>
+    <script>
+        function dividirCadena(cadenaADividir,separador) {
+            var arrayDeCadenas = cadenaADividir.split(separador);
+            document.write('<p>La cadena original es: "' + cadenaADividir + '"');
+            document.write('<br>El separador es: "' + separador + '"');
+            document.write("<br>El array tiene " + arrayDeCadenas.length + " elementos: ");
+             
+            for (var i=0; i < arrayDeCadenas.length; i++) {
+                document.write(arrayDeCadenas[i] + "<br>");
+            }
+        }
+             
+        var cadenaVerso = "Oh brave, new world that has such people in it.";
+        var cadenaMeses = "Jan Feb Mar Apr May Jun,Jul Aug Sep Oct Nov Dec";
+             
+        var espacio = " ";
+        var coma = ",";
+        //cadena orig -- separador
+        dividirCadena(cadenaVerso, espacio);
+        dividirCadena(cadenaVerso);
+        dividirCadena(cadenaMeses, coma);
+
+        const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+        console.log(p.replace('dog', 'monkey'));
+        // expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+        const regex = /Dog/i;
+        console.log(p.replace(regex, 'ferret'));
+        // expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+          
+        
+        var cadena1 = "La mañana se nos echa encima.";
+        // CRIS mañana se nos echa encim
+        var cadena2 = cadena1.slice(3, -2);
+        console.log(cadena2);
+        //Mostrando en consola: mañana se nos echa encim
+        
+        var cad = "La mañana se nos echa encima.";
+        cad.slice(-3);     // retorna 'ma.'
+        cad.slice(-3, -1); // retorna 'ma'
+        cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+            
+        var cad = "La mañana se nos echa encima.";
+        console.log(cad.slice(-10,-2)) //ha encim
+        console.log(cad.slice(-17,-5)) // nos echa en
+        console.log(cad.slice(-15,-3)) //os echa enci
+    </script>
+</body>
+</html>

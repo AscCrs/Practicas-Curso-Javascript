@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    <script type="text/javascript">
+        function checkName(evt) {
+        var charCode = evt.charCode;
+          if (charCode != 0) {
+            if (charCode < 97 || charCode > 122) {
+              evt.preventDefault();
+              alert("Por favor usa sólo letras minúsculas." + "\n"
+                    + "charCode: " + charCode + "\n"
+              );
+            }
+          }
+        }
+    </script> -->
+</head>
+<body>
+    <!-- <form onsubmit="alert('submit!');return false">
+        Primero: Enter en el campo de texto <input type="text" value="texto"><br>
+        Segundo: Click en "submit": <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        let form = document.createElement("form");
+        form.action = 'https://google.com/search';
+        form.method = 'GET';
+        form.innerHTML = '<input name="q" value="test">';
+        // el formulario debe estar en el document para poder enviarlo
+        document.body.append(form);
+        form.submit();
+    </script>
+
+    <p>Por favor entra tu nombre en letras minúsculas solamente.</p>
+    <form>
+        <input type="text" onkeypress="checkName(event);"/>
+    </form> -->
+
+    <script>
+        function ready() {
+          alert('DOM is ready');
+      
+          // la imagen aún no está cargada (a menos que se haya almacenado en caché), por lo que el tamaño es 0x0
+          alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+        }
+        document.addEventListener("DOMContentLoaded", ready);
+    </script>
+    <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">
+      
+</body>
+</html>

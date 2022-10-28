@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ejemplo" id="ejemplo">
+        <p class="parrafo">
+            Hola soy un ejemplo
+        </p>
+    </div>
+    <script>
+        var nombre = "Cristopher";
+        var plantilla = `hola que tal estas ${nombre}`;
+        console.log(plantilla);
+
+        var objeto = {nombre: "Cristopher"};
+        var plantilla = `Hola que tal estas ${objeto.nombre}`;
+        console.log(plantilla);
+
+        // BUSQUEDA
+        // var div1 = document.querySelector(".ejemplo");
+        
+        var div1 = document.getElementById("ejemplo");
+        
+        var alumno = {nombre: "Cristopher", nota: 3};
+        var plantilla = `
+            <div>
+                La calificacion de ${alumno.nombre} es
+                ${alumno.nota > 5? "aprobado":"suspenso"}
+            </div>
+        `;
+
+        window.onload = function() {
+            var body = document.getElementsByTagName("body")[0];
+
+            body.innerHTML = plantilla; // innerHTML agrega un elemento al documento html 
+        }
+
+        var alumnos = [{nombre: "pedro", nota: 3}, {nombre: "Cristopher", nota: 7}]; // Para usar una plantilla se usa ``
+        var plantilla = `
+            <div>
+                ${alumnos.map(a => `${a.nombre} ${a.nota>5?"aprobado":"suspenso"}`)}
+            </div>
+        `; // map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+
+        window.onload = function() {
+            var body = document.getElementsByTagName("body")[0];
+            console.log(body);
+            body.innerHTML = plantilla;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica JS 1</title>
+</head>
+<body>
+    <script>
+        function varTest() {
+            var x = 31;
+            if (true) {
+                var x = 71; // Misma variable
+                console.log(x); // 71
+            }
+            console.log(x); // 71
+        }
+
+        function letTest() {
+            let x = 31;
+            if (true) {
+                let x = 71; // Variable diferente
+                console.log(x); //71
+            }
+            console.log(x); //31
+        }
+        // Llamamos a las funciones
+
+        varTest();
+        letTest();
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i); // 0, 1, 2, 3, 4, ... 9
+        }
+        // console.log(i); // ReferenceError: i is not defined
+
+        const num = 4;
+        var numero = 10;
+        console.log("Hola");
+        console.log(numero); // Salida de texto por consola
+        numero = 5.5;
+        console.log(numero);
+        numero = "No soy un numero";
+        console.log(numero);
+        console.log(num);
+    </script>
+</body>
+</html>

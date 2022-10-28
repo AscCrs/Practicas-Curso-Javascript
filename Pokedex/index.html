@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- FUENTE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/normalize.css">
+
+    <link rel="icon" type="image/png" href="static/img/favicon-32x32.png" sizes="32x32" />
+
+
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo-menu">
+                <a href=""><img src="static/img/LogoMenu.png" alt="Pokeball"></a>
+            </div>
+
+            <ul class="nav-content">
+                <li class="gen-selector" id="gen-1">Gen 1</li>
+                <li class="gen-selector" id="gen-2">Gen 2</li>
+                <li class="gen-selector" id="gen-3">Gen 3</li>
+                <li class="gen-selector" id="gen-4">Gen 4</li>
+                <li class="gen-selector" id="gen-5">Gen 5</li>
+                <li class="gen-selector" id="gen-6">Gen 6</li>
+                <li class="gen-selector" id="gen-7">Gen 7</li>
+                <li class="gen-selector" id="gen-8">Gen 8</li>
+            </ul>
+
+            <div class="box">
+                <form class="container-1" id = "srchbr">
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Name or #id">
+                </form>
+            </div>
+
+            <!-- Menu Para el responsive -->
+            <div class="menu-btn">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <img class="logo-main" src="static/img/Pokedex.png" alt="Logo-Pokedex">
+        <main>
+            <div class="content_pokedex" id="content-pokedex" onclick="exitModal()">
+                <!-- Punto de generacion para las cartas de los pokemones -->
+            </div>
+
+            <div class="buttons-cont" id="buttons">
+                <input class="buttons-nav" id="previous" type="button" value="Anterior">
+                <input class="buttons-nav" id="next" type="button" value="Siguiente">
+            </div>
+        </main>
+    </section>
+
+    <footer id="footer"> 
+        <h2 style="font-size: 20px;">
+            <span>Pokedex developed by </span>
+            <span style="color: aqua;">C</span><span>ris.</span><span style="color: crimson;">D</span><span>ev</span>
+        </h2>
+
+        <div class="social-network">
+            <a href="https://www.instagram.com/ed.a.crz/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100064729573648" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/cristopher-eduardo-ascencio-cruz-241b70213/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

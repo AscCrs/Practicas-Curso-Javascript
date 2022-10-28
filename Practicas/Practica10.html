@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 10</title>
+</head>
+<body>
+    <input type="text" id="input"> oninput: <span id="result"></span>
+    
+    <script>
+        input.oninput = function() {
+            result.innerHTML = input.value;
+        };
+    </script>
+
+    <script>
+        function myFunctionUpper() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        function myFunctionLower() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toLowerCase();
+        }
+    </script>
+
+    Enter your name:
+    <input type="text" id="fname" onblur="myFunctionUpper()" onfocus="myFunctionLowe(this)">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+    <form>
+        Choose which browser you prefer:
+        <select id="browsers" onchange="preferedBrowser()">
+            <option value="Chrome">Chrome</option>
+            <option value="Internet Explorer">Internet Explorer</option>
+            <option value="Firefox">Firefox</option>
+        </select>
+    </form>
+
+    <script>
+        function preferedBrowser() {
+            prefer = document.forms[0].browsers.value;
+            alert("You prefer browsing internet with " + prefer);
+        }
+    </script>
+
+    Enter your name: <input type="text" onfocus="myFunction(this)" onblur="myFunction2(this)">
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+    <script>
+        function myFunction(x) {
+          x.style.background = "yellow";
+        }
+        function myFunction2(x) {
+          x.style.background = "white";
+        }
+    </script>
+
+    Enter your name: <input type="text" onfocus="myFunction(this)" onblur="myFunction2(this)">
+    <p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+    <script>
+        function myFunction(x) {
+          x.style.background = "yellow";
+        }
+        function myFunction2(x) {
+          x.style.background = "white";
+        }
+    </script>
+
+    <form onsubmit="confirmInput()" action="https://www.w3schools.com/">
+        Enter your name: <input id="fname" type="text" size="20">
+        <input type="submit">
+    </form>
+
+    <script>
+        function confirmInput() {
+            fname = document.forms[0].fname.value;
+            alert("Hello " + fname + "! You will now be redirected to www.w3Schools.com");
+        }
+    </script>
+
+    <script>
+        function message() {
+            alert("This alert box was triggered by the onreset event handler"); 
+        }
+    </script>
+
+    <form onreset="message()">
+        Enter your name: <input type="text" size="20">
+        <input type="reset">
+    </form>
+</body>
+</html>
